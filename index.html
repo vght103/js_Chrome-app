@@ -10,16 +10,9 @@
   <body>
     <main>
       <div class="todo_wrap">
-        <h1 id="greeting" class="hidden"></h1>
         <h2 id="clock">00:00:00</h2>
-        <form id="todo-form">
-          <input
-            type="text"
-            required
-            placeholder="Write a To Do and Press"
-            id=""
-          />
-        </form>
+        <h1 id="greeting" class="hidden"></h1>
+
         <form id="login-form" class="hidden">
           <input
             required
@@ -27,8 +20,12 @@
             type="text"
             placeholder="What is your name?"
           />
-          <button type="submit">Log In</button>
+          <!-- <button class="login_btn" type="submit">로그인</button> -->
         </form>
+        <form id="todo-form">
+          <input type="text" required placeholder="Today's ToDo" id="" />
+        </form>
+
         <ul class="todo-list"></ul>
 
         <div id="quote">

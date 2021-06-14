@@ -27,29 +27,38 @@ function createTodo(newTodoText){
   var todoListItem = document.createElement("li");
   todoListItem.id = newTodoText.id;
 
+  var viewDiv = document.createElement("div");
+  viewDiv.classList = "view";
 
-  var span = document.createElement("span");
+  var toggleBtn = document.createElement("input");
+  toggleBtn.type = "checkbox";
+  toggleBtn.classList = "toggle";
+
+  var label = document.createElement("label");
   var deleteBtn = document.createElement("button");
+  deleteBtn.classList = "destroy";
 
-
-  span.innerText = newTodoText.text;
+  label.innerText = newTodoText.text;
   // newTodoObj 의 오브젝트를 받아오기 때문에 . text를 추가하면 
   // 변수에 지정한 텍스트(newTodoText) 나온다
 
 
   deleteBtn.innerText = "❌";
   deleteBtn.addEventListener("click", deleteTodo);
+  
 
 
-
-  todoListItem.appendChild(span);
-  todoListItem.appendChild(deleteBtn);
+  todoListItem.appendChild(viewDiv);
+  viewDiv.appendChild(toggleBtn);
+  viewDiv.appendChild(label);
+  viewDiv.appendChild(deleteBtn);
   todoList.appendChild(todoListItem);
 
 }
 
 function deleteTodo(e){
-  var currentList = e.target.parentElement;
+  var currentList = e.target.parentElement.parentElement;
+  console.log(currentList);
   todosData = todosData.filter((todoId) => todoId.id !== parseInt(currentList.id));
 
   // todoId = number 이고 currentList.id = string 이다. 그래서 서로 다른값이 된다.

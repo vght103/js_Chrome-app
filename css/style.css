@@ -18,30 +18,111 @@ li{
   display: none;
 }
 
+img {
+  display: none;
+}
+
 main {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: url(../imgs/0.jpg) no-repeat 50% 50%; */
+  background-position: 50%, 50%;
+  background-size: cover;
   height: 100vh;
   overflow: hidden;
 }
 
 .todo_wrap {
-  width: 500px;
-  /* height: 500px; */
-  margin: 0 auto;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   color: white;
+
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 4rem;
+}
+
+#login-form > input {
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  /* width: 400px; */
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+}
+
+#login-form > input::placeholder{
+  color: white;
+  opacity: 0.8;
+}
+
+#todo-form > input {
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  /* width: 400px; */
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+
+}
+
+#todo-form > input::placeholder{
+  color: white;
+  opacity: 0.8;
+}
+
+.login_btn{
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 0 3px;
+
+}
+
+.login_btn:hover {
+  color: black;
+  background-color: white;
+
+}
+
+.todo-list > li {
+  margin-bottom: 15px;
+}
+
+.todo-list .view > input.toggle{
+  margin-right: 10px;
+}
+
+
+.todo-list label{
+  font-size: 1.2rem;
+}
+
+#quote  {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* text-align: center; */
+  bottom: 70px;
 }
 
-body {
-  background: url(../imgs/0.jpg) no-repeat ;
-  background-size: cover;
+.todo-list .view > button.destroy{
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
 }
 
-img {
-  display: none;
-}

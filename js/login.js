@@ -16,10 +16,10 @@ function onLoginSubmit(event){
   greeting.innerText = "Hello " + userName;
   // greeting.innerText = `Hello ${userName}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
-  paintGreetings(userName);
+  createGreetings(userName);
 }
 
-function paintGreetings(userName){
+function createGreetings(userName){
   greeting.classList.remove(HIDDEN_CLASSNAME);
   greeting.innerText = "Hello " + userName;
 }
@@ -31,7 +31,7 @@ if(savedUserName === null){
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
-  paintGreetings(savedUserName);
+  createGreetings(savedUserName);
 }
 
   // preventDefault = 기본 효과가 적용되는것을 막아준다.
